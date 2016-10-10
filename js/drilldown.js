@@ -51,7 +51,7 @@ $(function () {
         // console.log(a)
         return a;//定义日常趋势图函数
     }
-    $.getJSON('../data/daily',null,function(data){
+    $.getJSON('./data/daily',null,function(data){
            dailyChart(data.data,data.drilldown);
         });
 
@@ -101,7 +101,7 @@ $(function () {
         });
         // console.log(data)
     }
-    $.getJSON('../data/district',null,function(data){
+    $.getJSON('./data/district',null,function(data){
         data.pieData[0].sliced=true;
         data.pieData[0].selected=true;
         pieDistrict(data.pieData,data.dateRange);
@@ -152,7 +152,7 @@ $(function () {
         });
         // console.log(data)
     }
-    $.getJSON('../data/salary',null,function(data){
+    $.getJSON('./data/salary',null,function(data){
         data.pieData[0].sliced=true;
         data.pieData[0].selected=true;
         pieSalary(data.pieData,data.dateRange);
@@ -201,7 +201,7 @@ $(function () {
         });
         // console.log(data)
     }
-    $.getJSON('../data/salary',null,function(data){
+    $.getJSON('./data/salary',null,function(data){
         data.pieData[0].sliced=true;
         data.pieData[0].selected=true;
         pieWorkyear(data.pieWorkyear,data.dateRange);
