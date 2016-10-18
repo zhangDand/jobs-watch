@@ -162,7 +162,7 @@ $(function () {
         chart.reflow();
         setTimeout(function(){chart.reflow()},170);
     });
-    function pieWorkyear(data,dateRange){ //地区饼图函数
+    function pieWorkyear(data,dateRange){ //年限饼图函数
         // console.log(dateRange)
         $('#pie-workyear').highcharts({
             chart: {
