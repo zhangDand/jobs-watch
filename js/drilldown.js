@@ -51,7 +51,7 @@ $(function () {
         // console.log(a)
         return a;//定义日常趋势图函数
     }
-    $.getJSON('./data/daily',null,function(data){
+    $.getJSON('./data/daily.json',null,function(data){
            dailyChart(data.data,data.drilldown);
         });
 
@@ -101,7 +101,7 @@ $(function () {
         });
         // console.log(data)
     }
-    $.getJSON('./data/district',null,function(data){
+    $.getJSON('./data/district.json',null,function(data){
         data.pieData[0].sliced=true;
         data.pieData[0].selected=true;
         pieDistrict(data.pieData,data.dateRange);
@@ -152,7 +152,7 @@ $(function () {
         });
         // console.log(data)
     }
-    $.getJSON('./data/salary',null,function(data){
+    $.getJSON('./data/salary.json',null,function(data){
         data.pieData[0].sliced=true;
         data.pieData[0].selected=true;
         pieSalary(data.pieData,data.dateRange);
@@ -201,7 +201,7 @@ $(function () {
         });
         // console.log(data)
     }
-    $.getJSON('./data/salary',null,function(data){
+    $.getJSON('./data/salary.json',null,function(data){
         data.pieData[0].sliced=true;
         data.pieData[0].selected=true;
         pieWorkyear(data.pieWorkyear,data.dateRange);
@@ -215,58 +215,4 @@ $(function () {
 
 $(function () {
     
-});
-$(function () {
-    $('#pie-district2').highcharts({
-        chart: {
-            plotBackgroundColor: null,
-            plotBorderWidth: null,
-            plotShadow: false,
-            type: 'pie'
-        },
-        title: {
-            text: 'Browser market shares January, 2015 to May, 2015'
-        },
-        tooltip: {
-            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-        },
-        plotOptions: {
-            pie: {
-                allowPointSelect: true,
-                cursor: 'pointer',
-                dataLabels: {
-                    enabled: true,
-                    format: '<b>{point.name}</b>: {point.percentage:.1f} %',
-                    style: {
-                        color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
-                    }
-                }
-            }
-        },
-        series: [{
-            name: 'Brands',
-            colorByPoint: true,
-            data: [{
-                name: 'Microsoft Internet Explorer',
-                y: 56.33
-            }, {
-                name: 'Chrome',
-                y: 24.03,
-                sliced: true,
-                selected: true
-            }, {
-                name: 'Firefox',
-                y: 10.38
-            }, {
-                name: 'Safari',
-                y: 4.77
-            }, {
-                name: 'Opera',
-                y: 0.91
-            }, {
-                name: 'Proprietary or Undetectable',
-                y: 0.2
-            }]
-        }]
-    });
 });
