@@ -1,4 +1,4 @@
-$.getJSON('./data/wordcloud',null,function(data){
+$.getJSON('./data/wordcloud.json',null,function(data){
   WordCloud(document.getElementById('wordcloud'), {
   list: data,
   fontFamily: 'Times, serif',
